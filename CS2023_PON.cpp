@@ -1,31 +1,26 @@
-#include <iostream>
+#include <bits/stdc++.h>
+#include<math.h>
+
 using namespace std;
 
-int main() {
-    int T;
-    cin >> T;
-
-    while (T--) {
-        int N;
-        cin >> N;
-        int B;
-        cin >> B;
-        int current = -1;
-        int i = 0;
-
-        while (i < N) {
-            int AX;
-            cin >> AX;
-            if ((AX & B) == B)
-                current &= AX;
-            i++;
-        }
-
-        if (current == B)
-            cout << "YES" << endl;
-        else
-            cout << "NO" << endl;
-    }
-
-    return 0;
+int main() 
+{
+	int t; cin>>t; 
+	while(t--)
+	{
+	    int n, b;
+	    cin>>n>>b;
+	    int i=0,  c=-1;
+	    while(i<n){
+	        int a ; cin>>a; if((a&b)==b) c&=a;
+	        i++;
+	    }
+	    if(c==b) 
+	        cout<<"yes"<<endl;
+	    else 
+	        cout<<"no"<<endl;
+	    
+	}
+	        
+	return 0;
 }
